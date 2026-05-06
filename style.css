@@ -176,6 +176,13 @@ nav a:hover {
   display: block;
 }
 
+.skill-box:hover, .card:hover, .timeline-content:hover {
+  background: rgba(188, 19, 254, 0.1); /* Tambah sikit warna purple bila hover */
+  border-color: var(--main-color);
+  box-shadow: 0 0 25px rgba(188, 19, 254, 0.3);
+  backdrop-filter: blur(15px); /* Kuatkan blur di belakang */
+}
+
 .skill-box span { font-size: 1.2rem; }
 
 /* ================= CARDS & TIMELINE ================= */
@@ -239,4 +246,22 @@ footer {
 @media (max-width: 900px) {
   .home { flex-direction: column-reverse; text-align: center; }
   nav { display: none; }
+}
+
+/* --- TAMBAHAN CUSTOM SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-purple);
 }
