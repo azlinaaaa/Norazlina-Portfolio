@@ -1,8 +1,4 @@
-/* 
-    Professional Portfolio Stylesheet 
-    Theme: Modern Dark / Neon-Cyber 
-    Optimized for: Premium UI & MNC Standard
-*/
+CODE CSS PORTFOLIO
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -13,11 +9,8 @@
   --text-dim: #a0a0a0;
   --main-color: #bc13fe;
   --secondary-purple: #8a2be2;
-  /* POLISHED: Deeper glassmorphism effect */
-  --card-bg: rgba(255, 255, 255, 0.03); 
-  --border-color: rgba(188, 19, 254, 0.25);
-  /* NEW: Premium transition timing */
-  --premium-curve: cubic-bezier(0.23, 1, 0.32, 1);
+  --card-bg: rgba(31, 31, 35, 0.7); /* Transparan sikit supaya nampak garis */
+  --border-color: rgba(188, 19, 254, 0.3);
 }
 
 * {
@@ -30,6 +23,7 @@
 
 body {
   background-color: var(--bg-color);
+  /* EFEK GARIS-GARIS PURPLE MODERN (GRID) */
   background-image: 
     linear-gradient(rgba(188, 19, 254, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(188, 19, 254, 0.05) 1px, transparent 1px);
@@ -38,27 +32,14 @@ body {
   overflow-x: hidden;
 }
 
-/* POLISHED: Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(transparent, var(--main-color), transparent);
-  border-radius: 10px;
-}
-
 /* ================= HEADER ================= */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 1.5rem 8%;
-  background: rgba(11, 11, 13, 0.85); /* Slightly more transparent */
-  backdrop-filter: blur(15px); /* Increased blur for premium feel */
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(11, 11, 13, 0.9);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,39 +52,19 @@ header {
   font-weight: 700;
   color: var(--main-color);
   text-decoration: none;
-  text-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
-  letter-spacing: -1px;
+  text-shadow: 0 0 10px rgba(188, 19, 254, 0.5);
 }
 
 nav a {
-  position: relative; /* For the animated underline */
   margin-left: 3rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.4rem;
   font-weight: 500;
-  transition: 0.3s var(--premium-curve);
+  transition: 0.3s;
 }
 
-/* POLISHED: Floating Underline Animation */
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--main-color);
-  transition: 0.3s var(--premium-curve);
-}
-
-nav a:hover::after, 
-nav a.active::after {
-  width: 100%;
-}
-
-nav a.active, 
-nav a:hover {
+nav a:hover, nav a.active {
   color: var(--main-color);
 }
 
@@ -118,20 +79,11 @@ section {
   text-align: center;
   margin-bottom: 4rem;
   color: var(--main-color);
-  /* PREMIUM: Shimmering text effect */
-  background: linear-gradient(90deg, #bc13fe, #f0abff, #bc13fe);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 4s linear infinite;
-}
-
-@keyframes shine {
-  to { background-position: 200% center; }
 }
 
 .section.light {
   background-color: var(--second-bg-color);
+  /* Garis grid tetap ada di section light */
   background-image: 
     linear-gradient(rgba(188, 19, 254, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(188, 19, 254, 0.03) 1px, transparent 1px);
@@ -149,7 +101,7 @@ section {
 .home-content h1 { font-size: 4.5rem; line-height: 1.2; }
 .home-content h1 span { color: var(--main-color); }
 .home-content h3 { font-size: 2.5rem; color: var(--secondary-purple); margin: 1rem 0; }
-.home-content p { font-size: 1.4rem; color: var(--text-dim); max-width: 500px; line-height: 1.6; }
+.home-content p { font-size: 1.4rem; color: var(--text-dim); max-width: 500px; }
 
 .home-img img {
   width: 25vw;
@@ -159,13 +111,20 @@ section {
   object-fit: cover;
   border: 4px solid var(--main-color);
   box-shadow: 0 0 30px rgba(188, 19, 254, 0.4);
-  /* PREMIUM: Floating Animation */
-  animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+/* Warna asal menu (putih) */
+nav a {
+    color: #fff; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Warna apabila menu aktif atau bila tetikus lalu (hover) */
+nav a.active, 
+nav a:hover {
+    color: #8e44ad; /* Warna purple pilihan anda */
+    border-bottom: 2px solid #8e44ad; /* Tambah garisan bawah jika mahu */
 }
 
 /* ================= BUTTON ================= */
@@ -178,78 +137,66 @@ section {
   border-radius: 3rem;
   text-decoration: none;
   font-size: 1.3rem;
-  font-weight: 600;
-  transition: 0.3s var(--premium-curve);
+  transition: 0.3s;
   box-shadow: 0 5px 15px rgba(188, 19, 254, 0.3);
 }
 
 .btn:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-4px);
   background: var(--secondary-purple);
-  box-shadow: 0 10px 25px rgba(188, 19, 254, 0.5);
 }
 
-/* ================= SKILLS & CARDS ================= */
+/* ================= SKILLS ================= */
+
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
-.skill-box, 
-.card, 
-.timeline-content, 
-.contact-box {
+.skill-box {
   background: var(--card-bg);
   padding: 2.5rem 1.5rem;
-  border-radius: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(10px); /* Enhanced Glassmorphism */
-  -webkit-backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s var(--premium-curve);
+  backdrop-filter: blur(5px);
+  transition: 0.4s;
 }
 
-/* PREMIUM: Inner Glow/Shine effect on hover */
-.skill-box::before, .card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  transition: 0.5s;
-}
-
-.skill-box:hover::before, .card:hover::before {
-  left: 100%;
-}
-
-.skill-box:hover, 
-.card:hover, 
-.timeline-content:hover {
-  transform: translateY(-10px);
+.skill-box:hover {
+  transform: translateY(-8px);
   border-color: var(--main-color);
-  box-shadow: 0 15px 35px rgba(188, 19, 254, 0.2);
+  box-shadow: 0 10px 20px rgba(188, 19, 254, 0.2);
 }
 
 .skill-box i {
-  font-size: 3.5rem; /* Larger icon */
+  font-size: 3rem;
   color: var(--main-color);
   margin-bottom: 1rem;
   display: block;
 }
 
-.skill-box span { font-size: 1.2rem; font-weight: 500; }
+.skill-box span { font-size: 1.2rem; }
 
-.card h3,
-.timeline-content h3 { color: var(--main-color); font-size: 2rem; margin-bottom: 1rem; }
+/* ================= CARDS & TIMELINE ================= */
+.card, .timeline-content {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(5px);
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
+.card h3, .timeline-content h3 { color: var(--main-color); font-size: 2rem; }
+
+/* Menyasarkan tajuk h3 dalam seksyen leadership */
 #leadership .card h3 {
     display: inline-block;
-    border-bottom: 3px solid var(--secondary-purple);
+    border-bottom: 3px solid #976798; /* Garisan bawah warna oren/kuning */
     padding-bottom: 5px;
     margin-top: 0;
 }
@@ -257,38 +204,41 @@ section {
 /* ================= EXTRA-CURRICULAR GRID ================= */
 .extra-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* <--- Ini yang buat 3 box satu baris */
   gap: 2rem;
   margin-top: 2rem;
 }
 
+/* Supaya nampak cantik bila buka guna handphone */
+@media (max-width: 768px) {
+  .extra-container {
+    grid-template-columns: 1fr; /* Jadi 1 box satu baris bila skrin kecil */
+  }
+}
+
 /* ================= CONTACT ================= */
+.contact-box {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
 .contact-box p { font-size: 1.4rem; margin: 1rem 0; }
 .contact-box i { color: var(--main-color); margin-right: 10px; }
-.contact-box a { color: var(--text-color); text-decoration: none; transition: 0.3s; }
-.contact-box a:hover { color: var(--main-color); }
+.contact-box a { color: var(--text-color); text-decoration: none; }
 
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 4rem;
+  padding: 3rem;
   background: var(--bg-color);
   border-top: 1px solid var(--border-color);
   color: var(--text-dim);
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .home { flex-direction: column-reverse; text-align: center; }
-  .home-content p { margin: 0 auto; }
   nav { display: none; }
-  .skills-container { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-  .extra-container {
-    grid-template-columns: 1fr;
-  }
-  .section-title { font-size: 2.5rem; }
-  .home-content h1 { font-size: 3rem; }
 }
