@@ -164,30 +164,29 @@ nav a:hover {
 }
 
 .skill-box:hover {
-transform: translateY(-12px) scale(1.02);
-    border-color: var(--main-color);
-    box-shadow: 0 20px 40px rgba(188, 19, 254, 0.15);
+  transform: translateY(-8px);
+  border-color: var(--main-color);
+  box-shadow: 0 10px 20px rgba(188, 19, 254, 0.2);
 }
 
 .skill-box i {
-background: var(--card-bg);
-    backdrop-filter: blur(15px); /* Tingkatkan blur */
-    border: 1px solid var(--border-color);
-    transition: var(--premium-transition);
-    position: relative;
-    overflow: hidden;
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .skill-box span { font-size: 1.2rem; }
 
 /* ================= CARDS & TIMELINE ================= */
 .card, .timeline-content {
-background: var(--card-bg);
-    backdrop-filter: blur(15px); /* Tingkatkan blur */
-    border: 1px solid var(--border-color);
-    transition: var(--premium-transition);
-    position: relative;
-    overflow: hidden;
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(5px);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .card h3, .timeline-content h3 { color: var(--main-color); font-size: 2rem; }
