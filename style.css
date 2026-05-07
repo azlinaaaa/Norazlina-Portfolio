@@ -230,7 +230,48 @@ nav a:hover {
     gap: 2.5rem;
     padding: 10px 0;
 }
+/* Pastikan 3 item satu baris untuk skrin besar */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2.5rem;
+    padding: 20px 0;
+}
 
+/* Gaya Butang GitHub */
+.github-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: auto; /* Letakkan butang di bawah sekali dalam kad */
+    text-align: center;
+}
+
+.github-btn:hover {
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
+}
+
+/* Responsive: 1 baris untuk handphone */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* 3. Project Card (Glassmorphism Purple Style) */
 .project-card {
     background: var(--card-bg);
