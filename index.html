@@ -17,19 +17,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+function toggleTranscript() {
+  const transcript = document.getElementById("transcriptContent");
+
+  if (transcript.style.display === "block") {
+    transcript.style.display = "none";
+  } else {
+    transcript.style.display = "block";
+  }
+}
+</script>
+
 <body>
 
 <!-- ================= HEADER ================= -->
 <header>
-  <a href="#home" class="logo">Norazlina</a>
+  <a href="#HOME" class="logo">Norazlina</a>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">HOME</a>
+    <a href="#STRENGTHS">STRENGTHS</a>
+    <a href="#PROJECTS">PROJECTS</a>
+    <a href="#EDUCATION">EDUCATION</a>
+    <a href="#SKILLS">SKILLS</a>
+    <a href="#CO-CURRICULAR">CO-CURRICULAR</a>
+    <a href="#CONTACT">CONTACT</a>
   </nav>
 </header>
 
@@ -55,59 +68,60 @@
 
 </section>
 
-<!-- ================= CORE STRENGTHS ================= -->
-<section class="section light">
+<!-- ================= STRENGTHS ================= -->
+<section id="STRENGTHS" class="section light">
 
-  <h2 class="section-title">What I Can Do</h2>
+  <h2 class="section-title">STRENGTHS</h2>
 
-  <div class="skills-container">
+  <div class="STRENGTHS-container">
 
-    <div class="skill-box">
-      <i class="fa-solid fa-broom"></i>
-      <span>Data Cleaning & EDA</span>
-    </div>
-
-    <div class="skill-box">
-      <i class="fa-solid fa-robot"></i>
-      <span>Machine Learning Modeling</span>
-    </div>
-
-    <div class="skill-box">
-      <i class="fa-solid fa-comments"></i>
-      <span>NLP & Sentiment Analysis</span>
-    </div>
-
-    <div class="skill-box">
+    <div class="STRENGTHS-box">
       <i class="fa-solid fa-chart-column"></i>
-      <span>Dashboard & Visualization</span>
+      <span>Data Visualization</span>
     </div>
 
-    <div class="skill-box">
-      <i class="fa-solid fa-gears"></i>
-      <span>Feature Engineering</span>
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-database"></i>
+      <span>Data Science</span>
     </div>
 
-    <div class="skill-box">
-      <i class="fa-solid fa-timeline"></i>
-      <span>Time Series Forecasting</span>
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-robot"></i>
+      <span>Artificial Intelligence</span>
     </div>
 
-    <div class="skill-box">
-      <i class="fa-solid fa-lightbulb"></i>
-      <span>Business Insight Generation</span>
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-brain"></i>
+      <span>Machine Learning</span>
     </div>
 
-    <div class="skill-box">
-      <i class="fa-solid fa-magnifying-glass-chart"></i>
-      <span>Data-Driven Decision Support</span>
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-network-wired"></i>
+      <span>Deep Learning</span>
+    </div>
+
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-comments"></i>
+      <span>Large Language Model</span>
+    </div>
+
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-language"></i>
+      <span>Natural Language Processing</span>
+    </div>
+
+    <div class="STRENGTHS-box">
+      <i class="fa-solid fa-server"></i>
+      <span>Big Data Analysis</span>
     </div>
 
   </div>
+
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="section light">
-  <h2 class="section-title">Latest Projects</h2>
+<section id="PROJECTS" class="section">
+  <h2 class="section-title">PROJECTS</h2>
 
   <div class="projects-grid">
 
@@ -127,15 +141,15 @@
     </div>
 
     <!-- Project 2 -->
-    <div class="project-card">
+         <div class="project-card">
       <div class="project-img">
-        <img src="https://raw.githubusercontent.com/azlinaaaa/Norazlina-Portfolio/996f2ad780327f8c83c91d811730e355afe7d111/Image_Project/Graduate_Employability_Analysis_Report_2025.png" alt="Graduate Employability Analysis">
+        <img src="https://raw.githubusercontent.com/azlinaaaa/Norazlina-Portfolio/996f2ad780327f8c83c91d811730e355afe7d111/Image_Project/Web_Scraping.png" alt="Web Scraping Project">
       </div>
       <div class="project-info">
-        <h3>Graduate Employability Report 2025</h3>
-        <p>Comprehensive analysis of graduate job market trends and employment rates.</p>
-        <div class="tech-stack">Data Analysis • Power BI</div>
-        <a href="https://github.com/azlinaaaa/Graduate-Employability-Analysis-Report-2025.git" target="_blank" class="github-btn">
+        <h3>Web Scraping: House Attributes</h3>
+        <p>Data extraction from real estate portals for market research purposes.</p>
+        <div class="tech-stack">Python • BeautifulSoup • Scrapy</div>
+        <a href="https://github.com/azlinaaaa/Web-Scraping-House-Attribute-Malaysia.git" target="_blank" class="github-btn">
           <i class='bx bxl-github'></i> View on GitHub
         </a>
       </div>
@@ -164,7 +178,7 @@
       <div class="project-info">
         <h3>Malaysia House Market Dashboard</h3>
         <p>Interactive Power BI dashboard for real estate market visualization.</p>
-        <div class="tech-stack">Power BI • ETL</div>
+        <div class="tech-stack">Power BI • Dashboard</div>
         <a href="https://github.com/azlinaaaa/Malaysia-House-Price-Market-Analysis-Dashboard.git" target="_blank" class="github-btn">
           <i class='bx bxl-github'></i> View on GitHub
         </a>
@@ -179,7 +193,7 @@
       <div class="project-info">
         <h3>Predictive Safety Risk Insight</h3>
         <p>Analyzing workplace incident data to identify high-risk safety patterns.</p>
-        <div class="tech-stack">Data Science • Dashboard</div>
+        <div class="tech-stack">Data Analysis • Dashboard</div>
         <a href="https://github.com/azlinaaaa/PREDICTIVE_SAFETY_RISK_INSIGHT_DASHBOARD.git" target="_blank" class="github-btn">
           <i class='bx bxl-github'></i> View on GitHub
         </a>
@@ -189,17 +203,19 @@
     <!-- Project 6 -->
     <div class="project-card">
       <div class="project-img">
-        <img src="https://raw.githubusercontent.com/azlinaaaa/Norazlina-Portfolio/996f2ad780327f8c83c91d811730e355afe7d111/Image_Project/Web_Scraping.png" alt="Web Scraping Project">
+        <img src="https://raw.githubusercontent.com/azlinaaaa/Norazlina-Portfolio/996f2ad780327f8c83c91d811730e355afe7d111/Image_Project/Graduate_Employability_Analysis_Report_2025 .png" alt="Graduate Employability Analysis">
       </div>
       <div class="project-info">
-        <h3>Web Scraping: House Attributes</h3>
-        <p>Data extraction from real estate portals for market research purposes.</p>
-        <div class="tech-stack">Python • BeautifulSoup • Scrapy</div>
-        <a href="https://github.com/azlinaaaa/Web-Scraping-House-Attribute-Malaysia.git" target="_blank" class="github-btn">
+        <h3>Graduate Employability Report 2025</h3>
+        <p>Comprehensive analysis of graduate job market trends and employment rates.</p>
+        <div class="tech-stack">Data Analysis • Excel</div>
+        <a href="https://github.com/azlinaaaa/Graduate-Employability-Analysis-Report-2025.git" target="_blank" class="github-btn">
           <i class='bx bxl-github'></i> View on GitHub
         </a>
       </div>
     </div>
+
+    
 
     <!-- Project 7 -->
     <div class="project-card">
@@ -219,10 +235,54 @@
   </div>
 </section>
   
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section">
+<!-- ================= Education ================= -->
 
-  <h2 class="section-title">Skills</h2>
+<section id="EDUCATION" class="section light">
+  <h2 class="section-title">EDUCATION</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item hidden">
+      <img src="ums_black_vertical-01.png"
+           alt="UMS"
+           onerror="this.src='https://via.placeholder.com/75?text=UMS'">
+
+      <div class="timeline-content">
+        <h3>Bachelor of Computer Science with Honours (Data Science)</h3>
+        <p><strong>University of Malaysia Sabah</strong> | 2022 – Present</p>
+      </div>
+    </div>
+
+    <div class="timeline-item hidden">
+      <img src="KML.png"
+           alt="KML"
+           onerror="this.src='https://via.placeholder.com/75?text=KML'">
+
+      <div class="timeline-content">
+        <h3>Matriculation Program (Computer Science)</h3>
+        <p><strong>Labuan Matriculation College</strong> | 2021 – 2022</p>
+      </div>
+    </div>
+
+    <div class="timeline-item hidden">
+      <img src="SM.jpg"
+           alt="SM Lok Yuk Kota Kinabalu (CF)"
+           onerror="this.src='https://via.placeholder.com/75?text=SM'">
+
+      <div class="timeline-content">
+        <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+        <p><strong>SM Lok Yuk Kota Kinabalu (CF)</strong> | 2016 – 2020</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+<section id="SKILLS" class="section">
+
+  <h2 class="section-title">SKILLS</h2>
 
   <div class="skills-container">
 
@@ -269,47 +329,66 @@
   </div>
 </section>
 
-<!-- ================= LEADERSHIP ================= -->
-<section id="leadership" class="section light">
+<!-- ================= CO-CURRICULAR ================= -->
+<section id="CO-CURRICULAR" class="section light">
 
-  <h2 class="section-title">Leadership & Extra-Curricular</h2>
+  <h2 class="section-title">CO-CURRICULAR</h2>
 
-  <div class="extra-container">
+  <div class="cocurricular-wrapper">
 
-    <div class="card">
-      <h3>Executive Committee Member</h3>
+    <!-- LEFT SIDE -->
+    <div class="cards-column">
 
-      <p>
-        National-Level Anti-Corruption Inter-Higher Education Institutions (IPT)
-        Debate Competition, Chief Commissioner of MACC Trophy 2023.
-      </p>
+      <div class="card small-card">
+        <h3>Executive Committee Member</h3>
+
+        <p>
+          National-Level Anti-Corruption Inter-Higher Education Institutions (IPT)
+          Debate Competition, Chief Commissioner of MACC Trophy 2023.
+        </p>
+      </div>
+
+      <div class="card small-card">
+        <h3>State Level Committee Member</h3>
+
+        <p>
+          Managed logistics and coordination for "Malam Cinta Rasul"
+          and "Santai Mental Santai Fizikal" programs.
+        </p>
+      </div>
+
+      <div class="card small-card">
+        <h3>University Committee Member</h3>
+
+        <p>
+          Committee member for Pet Therapy FKI program,
+          focusing on student wellbeing and event management.
+        </p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>State Level Committee Member</h3>
+    <!-- RIGHT SIDE -->
+<div class="transcript-box">
 
-      <p>
-        Managed logistics and coordination for "Malam Cinta Rasul" and
-        "Santai Mental Santai Fizikal" programs.
-      </p>
-    </div>
+  <button class="transcript-btn" onclick="toggleTranscript()">
+    View Co-Curricular Transcript
+  </button>
 
-    <div class="card">
-      <h3>University Committee Member</h3>
-
-      <p>
-        Committee member for Pet Therapy FKI program, focusing on student wellbeing
-        and event management.
-      </p>
-    </div>
-
+  <div id="transcriptContent" class="transcript-content">
+    <img src="transkrip-aktiviti.jpg"
+         alt="Co-Curricular Transcript"
+         onerror="this.src='https://via.placeholder.com/500x600?text=Transcript'">
   </div>
+
+</div>
+
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section dim">
+<section id="CONTACT" class="section dim">
 
-  <h2 class="section-title">Contact</h2>
+  <h2 class="section-title">CONTACT</h2>
 
   <div class="contact-box">
 
